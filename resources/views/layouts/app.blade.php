@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
@@ -16,8 +17,10 @@
     @include('partials.top')
     @include('partials.navbar')
 
-    <div class="container">
-        @yield('main')
+    <div class="main">
+        <div class="container">
+            @yield('main')
+        </div>
     </div>
 </body>
 </html>
