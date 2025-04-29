@@ -1,3 +1,3 @@
 <div id="top">
-    TOP
+    <a href="{{ route('index') }}"><img src="{{ asset('images/logo1.png') }}" alt="logo"></a>
 </div>

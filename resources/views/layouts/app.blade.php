@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sprawiedliwi wśród Ukraińców</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
     @include('partials.top')
+    @include('partials.navbar')
 
     <div class="container">
         @yield('main')
