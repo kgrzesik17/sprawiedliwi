@@ -137,3 +137,13 @@ nav a:hover {
 .statue .statue-text {
     color: #292929
 }
+
+
+/* BAR */
+.bar {
+    margin-top: 2rem;
+    background-color: #1c5ca0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}

@@ -13,4 +13,10 @@
             <a href=""><button>Wesprzyj nas</button></a>
         </div>
     </div>
+
+    <div class="row-container">
+        <div class="bar">
+            <p class="bar-text">Jeśli chcesz podzielić się z nami ciekawą historią pomocy Ukraińców - Polakom w czasie wojny , napisz do nas - chętnie Cię wysłuchamy!</p>
+        </div>
+    </div>
 @endsection
