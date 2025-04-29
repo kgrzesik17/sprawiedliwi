@@ -91,6 +91,7 @@ nav a:hover {
 
 .main .container {
     width: 1250px;
+    margin-bottom: 3rem;
 }
 
 /* ROW */
@@ -146,4 +147,21 @@ nav a:hover {
     width: 100%;
     text-align: center;
     color: white;
+    margin-bottom: 2rem;
+}
+
+/* GRAVEYARD */
+.graveyard {
+    display: flex;
+    height: 100%;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    justify-content: space-between;
+}
+
+.graveyard .graveyard-col {
+    width: 50%;
 }

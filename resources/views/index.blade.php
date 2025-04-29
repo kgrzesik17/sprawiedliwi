@@ -19,4 +19,38 @@
             <p class="bar-text">Jeśli chcesz podzielić się z nami ciekawą historią pomocy Ukraińców - Polakom w czasie wojny , napisz do nas - chętnie Cię wysłuchamy!</p>
         </div>
     </div>
+
+    <div class="row-container" style="background-image: url('{{ asset('images/odznaczeniespr.jpg') }}">
+        <div class="graveyard">
+            <div class="graveyard-col">
+                <h1>Odznaczenie – Sprawiedliwi wśród Ukraińców</h1>
+                <p>
+                    Celem ufundowania powyższego odznaczenia jest uhonorowanie Ukraińców, którzy nieśli pomoc Polakom, narażając przy tym swoje życie.
+                    W skład odznaczenia wchodzi dyplom honorowy, medal , statuetka.
+                </p>
+                <h1>Kto może otrzymać?</h1>
+                <p>
+                    Osoba uznana za Sprawiedliwego jest odznaczana specjalnie wybitym medalem noszącym napisem SPRAWIEDLIWY WSRÓD UKRAIŃCÓW, statuetka I dyplomem honorowym . Każda osoba, którą uznano za Sprawiedliwego wśród Ukraińców, jest uprawniona do otrzymania od fundacji stosownego certyfikatu.
+                </p>
+                <p>
+                    Jeśli osoba ta nie żyje, jej krewny może wystąpić o przyznanie jej tytułu Sprawiedliwego Wśród Ukraińców
+                </p>
+            </div>
+
+            <div class="graveyard-col">
+                <p>
+                    Historie Ukraińców ratujących Polaków, Rzez wołyńska czy tez uratowani Polacy na Wołyniu - to tematyka którą będziemy się tu niezależnie zajmować.
+                </p>
+                <p>
+                    Tu będziemy zbierać informacje o eksterminacji polskiej ludności mieszkającej na kresach wschodnich przez ukraińskich nacjonalistów. Chcemy poznać ofiary, miejsca ich pochówku.
+                </p>
+                <p>
+                    Nacjonaliści ukraińscy dokonali eksterminacji ludności polskiej zamieszkującej Kresy Wschodnie Rzeczypospolitej, które znalazły się pod okupacją sowiecką i niemiecką. Od pojedynczych napadów oraz rzezi na masową skalę. Zginęło tam, według różnych szacunków, ok. 100- 150 tys. osób. Trudno datować poszczególne masowe mogiły - nie mając dostępu do tych miejsc.
+                </p>
+                <p>
+                    Opowiemy historie Ukraińców ratujących Polaków, pokażemy pomniki ludobójstwa OUN-UPA na podkarpaciu, przedstawimy zachowane relacje. Przedstawimy i opiszemy zbrodniarzy ukraińskich.
+                </p>
+            </div>
+        </div>
+    </div>
 @endsection
