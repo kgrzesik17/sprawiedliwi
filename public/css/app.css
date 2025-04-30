@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: rgb(54, 54, 54);
 }
 
@@ -69,7 +69,8 @@ nav .navbar-element {
 nav a {
     text-decoration: none;
     color: white;
-    font-family: "cal sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     letter-spacing: 0.1rem;
     padding-right: 1rem;
     padding-left: 1rem;
