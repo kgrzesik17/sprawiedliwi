@@ -44,3 +44,10 @@ Route::get('/category/publicystyka', function() {
         'category' => "Publicystyka"
     ]);
 })->name('publicystyka');
+
+
+Route::get('/category/publicystyka/literatura', function() {
+    return view('post-category', [
+        'category' => "Literatura"
+    ]);
+})->name('publicystyka.literatura');

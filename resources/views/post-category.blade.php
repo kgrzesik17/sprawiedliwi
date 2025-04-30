@@ -4,8 +4,31 @@
 
 @section('content')
     <div class="post-category">
-        <h1>Kategoria: {{ $category }}</h1>
+        <h1>Kategoria:
+            {{-- <select class="select-category" name="category" id="category">
+                <option value="{{ $category }}"><a href="ee">{{ $category = 'Publicystyka' ? 'Wszystko' : $category }}</a></option>
+            </select> --}}
+
+        <span class="dropdown">
+        <button class="button" id="select-category">Wszystko ▼</button>
+        <span class="dropdown-content">
+            <a href="{{ route('publicystyka') }}">
+            <div>
+                Wszystko
+            </div>
+            </a>
+
+            <a href="{{ route('publicystyka.literatura') }}">
+            <div>
+                Literatura
+            </div>
+            </a>
+        </span>
+        </h1>
+        </span>
     </div>
+
+
 
     <div class="articles">
         <div class="article">
@@ -29,3 +52,11 @@
         </div>
     </div>
 @endsection
+
+{{-- <script>
+    document.getElementById("select-category"),addEventListener("click", dropdown);
+
+    function dropdown() {
+        alert('works');
+    }
+</script> --}}

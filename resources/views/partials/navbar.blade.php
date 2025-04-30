@@ -9,7 +9,7 @@
                 <span class="navbar-text">O SPRAWIEDLIWYCH</span>
             </li></a>
 
-            <a href="{{ route('about-project') }}"><li>
+            <a href="{{ route('about-project') }}"><li class=>
                 <span class="navbar-text">O PROJEKCIE</span>
             </li></a>
 
