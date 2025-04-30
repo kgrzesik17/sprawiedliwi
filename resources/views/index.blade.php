@@ -3,9 +3,11 @@
 @section('main')
     <div class="row-container">
         <div class="article" style="background-image: url('{{ asset('images/dummy-article.jpg') }}')">
-            <div class="article-bar">
-                <p class="last-article-text">Całe rodziny polaków z nożami w plecach. Piotr Zychowicz: Wołyń skonał w osamotnieniu</p>
-            </div>
+            <a href="{{ route('post.show', ['post' => $post->id]) }}">
+                <div class="article-bar">
+                    <p class="last-article-text">{{ $post->title }}</p>
+                </div>
+            </a>
         </div>
 
         <div class="statue" style="background-image: url('{{ asset('images/statuetka.jpg') }}')">
