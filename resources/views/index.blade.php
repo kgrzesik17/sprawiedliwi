@@ -20,8 +20,8 @@
         </div>
     </div>
 
-    <div class="row-container" style="background-image: url('{{ asset('images/odznaczeniespr.jpg') }}">
-        <div class="graveyard">
+    <div class="row-container">
+        <div class="graveyard" style="background-image: url('{{ asset('images/odznaczeniespr.jpg') }}">
             <div class="graveyard-col">
                 <h1>Odznaczenie – Sprawiedliwi wśród Ukraińców</h1>
                 <p>
@@ -50,6 +50,18 @@
                 <p>
                     Opowiemy historie Ukraińców ratujących Polaków, pokażemy pomniki ludobójstwa OUN-UPA na podkarpaciu, przedstawimy zachowane relacje. Przedstawimy i opiszemy zbrodniarzy ukraińskich.
                 </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-container">
+        <div class="help" style="background-image: url('{{ asset('images/help.jpg') }}">
+            <div class="help-col">
+                <h1>Pomóż odnaleźć ludzi, którzy pomogli</h1>
+            </div>
+
+            <div class="help-col">
+                <p>Wesprzyj nas i pomóż nam okazać wdzięczność tym, którzy kiedyś wyciągneli pomocną dłoń. Jeśli masz jakieś informacje, mogące okazać się przydatne, koniecznie skontaktuj się z nami!</p>
             </div>
         </div>
     </div>
