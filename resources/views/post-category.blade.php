@@ -6,11 +6,11 @@
     <div class="post-category">
         <h1>Kategoria:
             {{-- <select class="select-category" name="category" id="category">
-                <option value="{{ $category }}"><a href="ee">{{ $category = 'Publicystyka' ? 'Wszystko' : $category }}</a></option>
+                <option value="{{ $category }}"><a href="ee">{{ $category = 'Publicystyka' ? 'Wszystko ▼' : $category }}</a></option>
             </select> --}}
 
         <span class="dropdown">
-        <button class="button" id="select-category">Wszystko ▼</button>
+        <button class="button" id="select-category">{{ $category == 'Publicystyka' ? 'Wszystko' : $category }} ▼</button>
         <span class="dropdown-content">
             <a href="{{ route('publicystyka') }}">
             <div>
