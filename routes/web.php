@@ -32,3 +32,9 @@ Route::get('/about-us', function() {
 Route::get('/about-project', function() {
     return view('about-project');
 })->name('about-project');
+
+Route::get('/category/miejsca-pamieci', function() {
+    return view('post-category', [
+        'category' => "Miejsca pamięci"
+    ]);
+})->name('miejsca-pamieci');

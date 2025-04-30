@@ -273,3 +273,41 @@ nav a:hover {
 .post-right a:hover {
     text-decoration: underline;
 }
+
+/* POST CATEGORY */
+.post-category h1 {
+    color: #1c5ca0;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(131, 131, 131);
+}
+
+/* ARTICLES */
+
+.articles .article {
+    width: 100%;
+    max-height: 300px;
+}
+
+.articles .article h1 {
+    font-size: 30px;
+}
+
+.articles .article img {
+    max-width: 30%;
+    float: left;
+    margin-right: 2rem;
+}
+
+.articles .article p {
+    display: block;
+}
+
+.articles .article a {
+    color:#507ba8
+}
+
+.articles .article a:hover {
+    color:#314c68;
+    text-decoration: underline;
+}

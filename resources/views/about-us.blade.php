@@ -22,7 +22,3 @@
 </p>
 
 @endsection
-
-@section('post-right')
-    <h2>test</h2>
-@endsection

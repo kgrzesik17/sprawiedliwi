@@ -68,7 +68,3 @@
 <img src="{{ asset('images/logo_fgm.png') }}" alt="obraz">
 
 @endsection
-
-@section('post-right')
-    <h2>test</h2>
-@endsection

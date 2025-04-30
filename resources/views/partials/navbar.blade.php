@@ -13,7 +13,7 @@
                 <span class="navbar-text">O PROJEKCIE</span>
             </li></a>
 
-            <a href=""><li>
+            <a href="{{ route('miejsca-pamieci') }}"><li>
                 <span class="navbar-text">MIEJSCA PAMIĘCI</span>
             </li></a>
 
