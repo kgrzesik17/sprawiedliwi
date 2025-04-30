@@ -1,7 +1,7 @@
 <nav>
     <div class="navbar-container">
         <ul>
-            <a href=""><li>
+            <a href="{{ route('index') }}"><li>
                 <span class="navbar-text">STRONA GŁÓWNA</span>
             </li></a>
 

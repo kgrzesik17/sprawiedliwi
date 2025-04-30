@@ -1,9 +1,10 @@
 body {
     margin: 0;
     font-family: 'roboto', sans-serif;
+    color: rgb(54, 54, 54);
 }
 
-button {
+.button {
     font-family: 'roboto', sans-serif;
     font-size: 18px;
     color: white;
@@ -13,13 +14,17 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+.button:hover {
     background-color: #3a7dc4;
     cursor: pointer;
 }
 
-button:active {
+.button:active {
     background-color: #234972;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* TOP ELEMENT */
@@ -206,4 +211,53 @@ nav a:hover {
 .words p {
     margin: 0;
     color: #545454;
+}
+
+/* POST VIEW */
+.post-view title {
+    color:#1c5ca0;
+}
+
+/* LEFT */
+.post-left {
+    float: left;
+    width: 60%;
+    margin-right: 5%;
+}
+
+.post-left h1 {
+    color: #1c5ca0;
+}
+
+/* RIGHT */
+.post-right {
+    float: right;
+    width: 30%;
+    margin-top: 2rem;
+    margin-left: 5%;
+}
+
+.post-right form div {
+    margin-bottom: 1rem;
+}
+
+.post-right h1 {
+    color: #1c5ca0;
+    font-size: 28px;
+}
+
+.post-right ul {
+    padding-left: 2rem;
+}
+
+.post-right li {
+    margin-bottom: 1.5rem;
+}
+
+.post-right a {
+    color: rgb(55, 55, 55);
+}
+
+.post-right a:hover {
+    text-decoration: underline;
 }

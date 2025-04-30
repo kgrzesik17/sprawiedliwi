@@ -12,7 +12,7 @@
 
         <div class="statue" style="background-image: url('{{ asset('images/statuetka.jpg') }}')">
             <p class="statue-text">Konkurs na statuetkę "Sprawiedliwi wśród ukraińców został rozstrzygnięty.</p>
-            <a href=""><button>Wesprzyj nas</button></a>
+            <a href="{{ route('konkurs') }}"><button class="button">Wesprzyj nas</button></a>
         </div>
     </div>
 
