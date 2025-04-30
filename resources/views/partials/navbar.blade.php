@@ -17,7 +17,7 @@
                 <span class="navbar-text">MIEJSCA PAMIĘCI</span>
             </li></a>
 
-            <a href=""><li>
+            <a href="{{ route('publicystyka') }}"><li>
                 <span class="navbar-text">PUBLICYSTYKA</span>
             </li></a>
 

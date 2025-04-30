@@ -38,3 +38,9 @@ Route::get('/category/miejsca-pamieci', function() {
         'category' => "Miejsca pamięci"
     ]);
 })->name('miejsca-pamieci');
+
+Route::get('/category/publicystyka', function() {
+    return view('post-category', [
+        'category' => "Publicystyka"
+    ]);
+})->name('publicystyka');
