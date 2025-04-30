@@ -24,6 +24,11 @@ Route::get('/konkurs', function() {
 })->name('konkurs');
 
 // o sprawiedliwych
-Route::get('/about', function() {
-    return view('about');
-})->name('about');
+Route::get('/about-us', function() {
+    return view('about-us');
+})->name('about-us');
+
+// o projekcie
+Route::get('/about-project', function() {
+    return view('about-project');
+})->name('about-project');

@@ -5,11 +5,11 @@
                 <span class="navbar-text">STRONA GŁÓWNA</span>
             </li></a>
 
-            <a href=""><li>
+            <a href="{{ route('about-us') }}"><li>
                 <span class="navbar-text">O SPRAWIEDLIWYCH</span>
             </li></a>
 
-            <a href=""><li>
+            <a href="{{ route('about-project') }}"><li>
                 <span class="navbar-text">O PROJEKCIE</span>
             </li></a>
 
