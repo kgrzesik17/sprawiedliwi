@@ -183,3 +183,27 @@ nav a:hover {
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
+
+/* WORDS */
+.words {
+    text-align: center;
+    width: 100%;
+}
+
+.words h1 {
+    color: #1c5ca0;
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+.words h2 {
+    color: #959595;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+.words p {
+    margin: 0;
+    color: #545454;
+}

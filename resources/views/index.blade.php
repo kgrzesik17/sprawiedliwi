@@ -65,4 +65,14 @@
             </div>
         </div>
     </div>
+
+    <div class="row-container">
+        <div class="words">
+            <h1>Kilka słów...</h1>
+            <h2>Pro publico bono inaczej pro bono (łac.)- dla dobra publicznego, dla dobra ogółu.</h2>
+            <p>• Dzieje obu narodów - polskiego i ukraińskiego - pełne są dramatycznych wydarzeń. Powinny być przestrogą dla potomnych</p>
+            <p>• Idealnie by było, gdyby mówienie o tragicznych wydarzeniach sprzed lat nie wpływało na kształt bieżących relacji międzyludzkich</p>
+            <p>• Teza, jakoby stanem wojny można wytłumaczyć wszystkie okrucieństwa na ludności cywilnej – jest błędna. To było ludobójstwo i tak powinno być traktowane</p>
+        </div>
+    </div>
 @endsection
