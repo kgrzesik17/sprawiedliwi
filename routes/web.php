@@ -67,3 +67,7 @@ Route::get('/patronaty', function() {
 Route::get('/partnerzy', function() {
     return view('partners');
 })->name('partners');
+
+Route::get('/kontakt', function() {
+    return view('contact');
+})->name('contact');
