@@ -1,3 +1,7 @@
+@php
+    use App\Models\Post;
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,11 +51,12 @@
                     <h1>Ostatnie wpisy</h1>
 
                     <ul>
-                        <a href=""><li>Całe rodziny Polaków z nożami w plecach. Piotr Zychowicz: Wołyń skonał w osamotnieniu</li></a>
-                        <a href=""><li>Całe rodziny Polaków z nożami w plecach. Piotr Zychowicz: Wołyń skonał w osamotnieniu</li></a>
-                        <a href=""><li>Całe rodziny Polaków z nożami w plecach. Piotr Zychowicz: Wołyń skonał w osamotnieniu</li></a>
-                        <a href=""><li>Całe rodziny Polaków z nożami w plecach. Piotr Zychowicz: Wołyń skonał w osamotnieniu</li></a>
+                        @foreach(Post::orderBy('id', 'desc')->take(4)->get() as $post)
+                            <a href="{{ route('post.show', ['post' => $post]) }}"><li>{{ $post->title }}</li></a>
+                        @endforeach
                     </ul>
+
+
                 </div>
 
                 <div class="contact">
