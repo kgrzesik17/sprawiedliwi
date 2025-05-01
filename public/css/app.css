@@ -369,3 +369,15 @@ nav a:hover {
 #patroni li a:hover {
     text-decoration: underline;
 }
+
+.button-delete {
+    background-color: rgb(235, 44, 44);
+}
+
+.button-delete:hover {
+    background-color: rgb(232, 74, 74);
+}
+
+.button-delete:active {
+    background-color: rgb(195, 18, 18);
+}

@@ -71,3 +71,13 @@ Route::get('/partnerzy', function() {
 Route::get('/kontakt', function() {
     return view('contact');
 })->name('contact');
+
+Route::get('/panel', function() {
+    return view('panel');
+})->name('panel');
+
+Route::get('/post/{post}/edit', function(Post $post) {
+    return view('show-post', [
+        'post' => $post
+    ]);
+})->name('post.show');
