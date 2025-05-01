@@ -21,15 +21,15 @@
                 <span class="navbar-text">PUBLICYSTYKA</span>
             </li></a>
 
-            <a href=""><li>
+            <a href="{{ route('patronaty') }}"><li>
                 <span class="navbar-text">PATRONATY</span>
             </li></a>
 
-            <a href=""><li>
+            <a href="{{ route('partners') }}"><li>
                 <span class="navbar-text">PARTNERZY</span>
             </li></a>
 
-            <a href=""><li>
+            <a href="{{ route('contact') }}"><li>
                 <span class="navbar-text">KONTAKT</span>
             </li></a>
 
