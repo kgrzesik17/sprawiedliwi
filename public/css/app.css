@@ -348,3 +348,24 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.center {
+    text-align: center;
+}
+
+#patroni {
+    border-top: 1px solid rgb(54, 54, 54);
+    border-bottom: 1px solid rgb(54, 54, 54);
+}
+
+#patroni li {
+    margin-bottom: 1rem;
+}
+
+#patroni li a {
+    color: rgb(93, 93, 207);
+    font-weight: bold;
+}
+
+#patroni li a:hover {
+    text-decoration: underline;
+}

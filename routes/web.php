@@ -59,3 +59,11 @@ Route::get('/publicystyka/{category}', function($category) {
         'posts' => $categories->posts
     ]);
 })->name('publicystyka.kategoria');
+
+Route::get('/patronaty', function() {
+    return view('patronaty');
+})->name('patronaty');
+
+Route::get('/partnerzy', function() {
+    return view('partners');
+})->name('partners');
