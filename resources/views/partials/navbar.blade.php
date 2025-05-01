@@ -13,7 +13,7 @@
                 <span class="navbar-text">O PROJEKCIE</span>
             </li></a>
 
-            <a href="{{ route('miejsca-pamieci') }}"><li>
+            <a href="{{ route('publicystyka.kategoria', ['category' => 'miejsca pamięci']) }}"><li>
                 <span class="navbar-text">MIEJSCA PAMIĘCI</span>
             </li></a>
 

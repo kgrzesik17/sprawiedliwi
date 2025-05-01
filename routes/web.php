@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use App\Models\Category;
 
-require '../app/helpers.php';
-
 // strona glowna
 Route::get('/', function() {
     return view('index', [
@@ -44,13 +42,15 @@ Route::get('/miejsca-pamieci', function() {
 
 Route::get('/publicystyka', function() {
     return view('post-category', [
-        'category' => "Publicystyka"
+        'category' => "Publicystyka",
+        'posts' => Post::all()
     ]);
 })->name('publicystyka');
 
 
 Route::get('/publicystyka/{category}', function($category) {
     return view('post-category', [
-        'category' => $category
+        'category' => $category,
+        'posts' => Post::all()
     ]);
 })->name('publicystyka.kategoria');
