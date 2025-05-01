@@ -18,11 +18,13 @@
             </div>
             </a>
 
-            <a href="{{ route('publicystyka.literatura') }}">
-            <div>
-                Literatura
-            </div>
-            </a>
+            @foreach(App\Models\Category::all() as $category)
+                <a href="{{ route(App\Models\Category::buildRoute($category->category_name)) }}">
+                <div>
+                    {{ Str::title($category->category_name) }}
+                </div>
+                </a>
+            @endforeach
         </span>
         </h1>
         </span>

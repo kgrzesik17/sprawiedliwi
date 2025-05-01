@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Models\Category;
+
+require '../app/helpers.php';
 
 // strona glowna
 Route::get('/', function() {
@@ -51,3 +54,13 @@ Route::get('/category/publicystyka/literatura', function() {
         'category' => "Literatura"
     ]);
 })->name('publicystyka.literatura');
+
+
+// foreach(Category::all() as $category {
+//     $route = '/category/publicystyka/' . category;
+//     $name = 'publicystyka.' . $category
+
+//     return view('post-category', [
+//         'category' => $category->category_name
+//     ]);
+// })->name('')
