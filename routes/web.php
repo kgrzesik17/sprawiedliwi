@@ -36,31 +36,21 @@ Route::get('/about-project', function() {
     return view('about-project');
 })->name('about-project');
 
-Route::get('/category/miejsca-pamieci', function() {
+Route::get('/miejsca-pamieci', function() {
     return view('post-category', [
         'category' => "Miejsca pamięci"
     ]);
 })->name('miejsca-pamieci');
 
-Route::get('/category/publicystyka', function() {
+Route::get('/publicystyka', function() {
     return view('post-category', [
         'category' => "Publicystyka"
     ]);
 })->name('publicystyka');
 
 
-Route::get('/category/publicystyka/literatura', function() {
+Route::get('/publicystyka/{category}', function($category) {
     return view('post-category', [
-        'category' => "Literatura"
+        'category' => $category
     ]);
-})->name('publicystyka.literatura');
-
-
-// foreach(Category::all() as $category {
-//     $route = '/category/publicystyka/' . category;
-//     $name = 'publicystyka.' . $category
-
-//     return view('post-category', [
-//         'category' => $category->category_name
-//     ]);
-// })->name('')
+})->name('publicystyka.kategoria');

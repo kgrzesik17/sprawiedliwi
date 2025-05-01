@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     public static function buildRoute($category) {
-        return 'publicystyka.' . $category;
+        return 'publicystyka/' . $category;
     }
 }

@@ -1,7 +1,5 @@
 @extends('layouts.main')
 
-
-
 @section('content')
     <div class="post-category">
         <h1>Kategoria:
@@ -10,7 +8,7 @@
             </select> --}}
 
         <span class="dropdown">
-        <button class="button" id="select-category">{{ $category == 'Publicystyka' ? 'Wszystko' : $category }} ▼</button>
+        <button class="button" id="select-category">{{ $category == 'Publicystyka' ? 'Wszystko' : Str::title($category) }} ▼</button>
         <span class="dropdown-content">
             <a href="{{ route('publicystyka') }}">
             <div>
@@ -19,7 +17,7 @@
             </a>
 
             @foreach(App\Models\Category::all() as $category)
-                <a href="{{ route(App\Models\Category::buildRoute($category->category_name)) }}">
+                <a href="{{ route('publicystyka.kategoria', ['category' => $category->category_name]) }}">
                 <div>
                     {{ Str::title($category->category_name) }}
                 </div>
