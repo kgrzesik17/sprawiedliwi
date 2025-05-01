@@ -49,8 +49,13 @@ Route::get('/publicystyka', function() {
 
 
 Route::get('/publicystyka/{category}', function($category) {
+    $cat = new Category;
+    $id = $cat->getIdByName($category);
+
+    $categories = Category::findOrFail($id);
+
     return view('post-category', [
         'category' => $category,
-        'posts' => Post::all()
+        'posts' => $categories->posts
     ]);
 })->name('publicystyka.kategoria');

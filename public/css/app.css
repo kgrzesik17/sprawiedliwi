@@ -322,7 +322,7 @@ nav a:hover {
 /* ARTICLES */
 .articles .article {
     width: 100%;
-    max-height: 300px;
+    max-height: 200px;
 }
 
 .articles .article h1 {
@@ -347,3 +347,4 @@ nav a:hover {
     color:#314c68;
     text-decoration: underline;
 }
+

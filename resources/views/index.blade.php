@@ -2,6 +2,7 @@
 
 @section('main')
     <div class="row-container">
+        @if($post)
         <div class="article" style="background-image: url('{{ asset('images/dummy-article.jpg') }}')">
             <a href="{{ route('post.show', ['post' => $post->id]) }}">
                 <div class="article-bar">
@@ -9,6 +10,15 @@
                 </div>
             </a>
         </div>
+        @else
+        <div class="article" style="background-image: url('{{ asset('images/dummy-article.jpg') }}')">
+            <a href="#">
+                <div class="article-bar">
+                    <p class="last-article-text">TUTAJ BĘDZIE NAJNOWSZY ARTYKUŁ</p>
+                </div>
+            </a>
+        </div>
+        @endif
 
         <div class="statue" style="background-image: url('{{ asset('images/statuetka.jpg') }}')">
             <p class="statue-text">Konkurs na statuetkę "Sprawiedliwi wśród ukraińców został rozstrzygnięty.</p>

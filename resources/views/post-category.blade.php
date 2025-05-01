@@ -31,13 +31,17 @@
     <div class="articles">
         @foreach($posts as $post)
             <div class="article">
-                <h1>{{ $post->title }}</h1>
+                <a href="{{ route('post.show', ['post' => $post]) }}"><h1>{{ $post->title }}</h1></a>
 
                 <img src="https://placehold.co/350x200" alt="article image">
 
-                <p>{{ Str::limit($post->content, 200) }}</p>
-
-                <a href="{{ route('post.show', ['post' => $post]) }}">Czytaj dalej...</a>
+                @if(strlen($post->content) > 200)
+                    <p>{{ Str::limit($post->content, 200) }}[...]</p>
+                    <a href="{{ route('post.show', ['post' => $post]) }}">Czytaj dalej...</a>
+                @else
+                    <p>{{ $post->content }}</p>
+                    <a href="{{ route('post.show', ['post' => $post]) }}">Czytaj artykuł...</a>
+                @endif
             </div>
         @endforeach
     </div>
