@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use App\Models\Category;
 
+use App\Http\Controllers\PostsController;
+
 // strona glowna
 Route::get('/', function() {
     return view('index', [
@@ -13,11 +15,11 @@ Route::get('/', function() {
 })->name('index');
 
 // jeden artykul
-Route::get('/post/{post}', function(Post $post) {
-    return view('show-post', [
-        'post' => $post
-    ]);
-})->name('post.show');
+// Route::get('/post/{post}', function(Post $post) {
+//     return view('show-post', [
+//         'post' => $post
+//     ]);
+// })->name('post.show');
 
 // konkurs na statuetke
 Route::get('/konkurs', function() {
@@ -76,8 +78,4 @@ Route::get('/panel', function() {
     return view('panel');
 })->name('panel');
 
-Route::get('/post/{post}/edit', function(Post $post) {
-    return view('show-post', [
-        'post' => $post
-    ]);
-})->name('post.show');
+Route::resource('/post', 'App\Http\Controllers\PostsController');

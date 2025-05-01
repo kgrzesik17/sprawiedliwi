@@ -15,7 +15,7 @@
 
                 @if(strlen($post->content) > 200)
                     <p>{{ Str::limit($post->content, 200) }}[...]</p>
-                    <a href="{{ route('post.show', ['post' => $post]) }}"><button class="button">Edytuj</button></a>
+                    <a href="{{ route('post.edit', ['post' => $post]) }}"><button class="button">Edytuj</button></a>
                     <a href="{{ route('post.show', ['post' => $post]) }}"><button class="button button-delete">Usuń</button></a>
                 @else
                     <p>{{ $post->content }}</p>
