@@ -401,10 +401,19 @@ nav a:hover {
 }
 
 #edit-container a {
-    color: rgb(93, 93, 207);
+    color: #1c5ca0;
     font-weight: bold;
 }
 
 #edit-container a:hover {
     text-decoration: underline;
+}
+
+#edit-form-container {
+    display: inline block;
+}
+
+select#category_id {
+    font-size: 25px;
+    color: rgb(54, 54, 54);
 }

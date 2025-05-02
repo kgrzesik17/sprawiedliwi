@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    // public function getLatest() {
-    //     return $this->latest()->first();
-    // }
+
+    protected $fillable = ['id', 'title', 'content', 'author_id', 'category_id', 'created_at', 'updated_at'];
+
 
     public function category() {
-        return $this->hasOne('App\Models\Category');
+        return $this->belongsTo('App\Models\Category');
     }
 }

@@ -6,9 +6,19 @@
         <h1>Edycja postu</h1>
     </div>
 
-    <form action="">
+    <form action="{{ route('post.update', ['post' => $post]) }}" method="POST">
+        @csrf
+        @method('PUT')
         <div>
             <input id="edit-title" type="text" value="{{ $post->title }}">
+
+            <select name="category_id" id="category_id">
+                {{-- <option value="{{ $post->category->id }}">{{ $post->category->category_name }}</option> --}}
+
+                @foreach(App\Models\Category::all() as $category)
+                    <option {{ ($category->id === $post->category->id) ? 'selected="selected"' : "" }} value="{{ $category->id }}">{{ $category->category_name }}</option>
+                @endforeach
+            </select>
         </div>
 
         <div>
@@ -23,7 +33,14 @@
 
         <div>
             <input type="submit" class="button" value="Edytuj">
+        </form>
+
+        <form action="{{ route('post.destroy', ['post' => $post]) }}" method="POST">
+            @csrf
+            @method('DELETE')
+
             <input type="submit" class="button button-delete" value="Usuń">
+        </form>
         </div>
-    </form>
+
 @endsection

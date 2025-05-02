@@ -56,7 +56,10 @@ class PostsController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->update($request->all());
+
+        // return redirect()->route('post.show', ['post' => $post]);
+        return redirect('panel');
     }
 
     /**
@@ -64,6 +67,8 @@ class PostsController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return redirect('panel');
     }
 }
