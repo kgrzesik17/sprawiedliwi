@@ -46,7 +46,9 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('edit-post', [
+            'post' => $post
+        ]);
     }
 
     /**
