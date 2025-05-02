@@ -19,26 +19,15 @@
 
                 <a href="{{ route('post.edit', ['post' => $post]) }}"><button id="edit-button" class="button">Edytuj</button></a>
 
-                <form action="{{ route('post.destroy', ['post' => $post]) }}" method="POST">
+                <form id="admin-form" action="{{ route('post.destroy', ['post' => $post]) }}" method="POST">
                     @csrf
                     @method('DELETE')
 
                     <button id="delete-button" class="button button-delete">Usuń</button>
                 </form>
 
-
-
             </div>
         @endforeach
         </div>
     </div>
 @endsection
-
-<script>
-    const element = document.getElementById("edit-button");
-    element.addEventListener("click", myFunction);
-
-    function myFunction() {
-        alert('works');
-    }
-</script>

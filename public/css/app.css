@@ -417,3 +417,7 @@ select#category_id {
     font-size: 25px;
     color: rgb(54, 54, 54);
 }
+
+#admin-form {
+    display: inline;
+}
