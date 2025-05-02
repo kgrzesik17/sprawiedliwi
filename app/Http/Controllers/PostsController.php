@@ -20,15 +20,24 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('create-post');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Post $post)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+            'category_id' => 'required'
+        ]);
+
+        $post = Post::create($validated);
+
+        // return redirect()->route('post.show', ['post' => $post]);
+        return redirect()->route('panel');
     }
 
     /**

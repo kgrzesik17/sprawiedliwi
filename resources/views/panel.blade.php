@@ -4,7 +4,7 @@
     <div class="panel">
         <h1>Panel administratora</h1>
 
-        <a href="#"><button class="button">Dodaj post</button></a>
+        <a href="{{ route('post.create') }}"><button class="button">Dodaj post</button></a>
 
         <div class="admin-post">
             @foreach(App\Models\Post::all() as $post)
