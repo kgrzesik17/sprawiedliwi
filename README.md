@@ -47,7 +47,7 @@ Zaimplementowano system użytkowników w celu autoryzacji administratora.
 ### Panel administratora
 Dla administratorów dostępny jest panel, który znacznie ułatwia administrację artykułami oraz użytkownikami.
 
-![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/panel2.png?raw=true)
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/panel1.png?raw=true)
 
 - Tworzenie, edycja oraz usuwanie artykułów
 
