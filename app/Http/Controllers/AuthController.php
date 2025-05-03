@@ -11,7 +11,13 @@ use App\Models\User;
 class AuthController extends Controller
 {
     public function showRegister() {
-        return view('auth.register');
+        // rejestracja mozliwa kiedy a) zalogowany jest administrator b) tworzone jest pierwsze konto administratora
+        if(auth()->check() || User::count() < 1) {
+            return view('auth.register');
+        }
+        else {
+            return abort(404);
+        }
     }
 
     public function showLogin() {
@@ -19,16 +25,23 @@ class AuthController extends Controller
     }
 
     public function register(Request $request) {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed'
-        ]);
+        if(auth()->check() || User::count() < 1) {
 
-        $user = User::create($validated);
+            $validated = $request->validate([
+                'name' => 'required|string|max:255|unique:users',
+                'password' => 'required|string|min:8|confirmed'
+            ]);
 
-        Auth::login($user);
+            $user = User::create($validated);
 
-        return redirect()->route('index');
+            Auth::login($user);
+
+            return redirect()->route('index');
+     }
+
+     else {
+        return abort(404);
+     }
     }
 
     public function login(Request $request) {
@@ -48,12 +61,18 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request) {
-        Auth::logout();
+        if(auth()->check()) {
+            Auth::logout();
 
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
 
-        return redirect()->route('index');
+            return redirect()->route('index');
+        }
+
+        else {
+            return abort(404);
+         }
     }
 }
 

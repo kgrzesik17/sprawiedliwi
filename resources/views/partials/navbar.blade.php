@@ -33,11 +33,13 @@
                 <span class="navbar-text">KONTAKT</span>
             </li></a>
 
-            <a href="{{ route('panel') }}"><li>
-                <span class="navbar-text">PANEL</span>
-            </li></a>
 
-            @if(Auth::user())
+
+            @if(auth()->check())
+                <a href="{{ route('panel') }}"><li>
+                    <span class="navbar-text">PANEL</span>
+                </li></a>
+
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <li>

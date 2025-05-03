@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\User;
 
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\AuthController;
@@ -76,15 +77,20 @@ Route::get('/kontakt', function() {
 })->name('contact');
 
 Route::get('/panel', function() {
-    return view('panel');
+    if(auth()->check()) {
+        return view('panel');
+    } else {
+        return abort(404);
+    }
+
 })->name('panel');
 
 Route::resource('/post', 'App\Http\Controllers\PostsController');
 
 // auth
-Route::get('/register',[AuthController::class, 'showRegister'])->name('show.register');
-Route::get('/login',[AuthController::class, 'showLogin'])->name('show.login');
+Route::get('/register', [AuthController::class, 'showRegister'])->name('show.register');
+Route::get('/login', [AuthController::class, 'showLogin'])->name('show.login');
 
-Route::post('/register',[AuthController::class, 'register'])->name('register');
-Route::post('/login',[AuthController::class, 'login'])->name('login');
-Route::post('/logout',[AuthController::class, 'logout'])->name('logout');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
