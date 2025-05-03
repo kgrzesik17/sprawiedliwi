@@ -11,7 +11,7 @@
             </a>
         </div>
         @else
-        <div class="article" style="background-image: url('{{ asset('images/dummy-article.jpg') }}')">
+        <div class="article" style="background: url('{{ asset('images/dummy-article.jpg') }}') bottom">
             <a href="#">
                 <div class="article-bar">
                     <p class="last-article-text">TUTAJ BĘDZIE NAJNOWSZY ARTYKUŁ</p>
@@ -20,7 +20,7 @@
         </div>
         @endif
 
-        <div class="statue" style="background-image: url('{{ asset('images/statuetka.jpg') }}')">
+        <div class="statue" style="background-image: url('{{ asset('images/statuetka.jpg') }}'); background-position: bottom;">
             <p class="statue-text">Konkurs na statuetkę "Sprawiedliwi wśród ukraińców został rozstrzygnięty.</p>
             <a href="{{ route('konkurs') }}"><button class="button">Wesprzyj nas</button></a>
         </div>
