@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sprawiedliwi wśród Ukraińców</title>
+    <title>{{ isset($html_title) ? $html_title . ' - ' : '' }}Sprawiedliwi wśród Ukraińców</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

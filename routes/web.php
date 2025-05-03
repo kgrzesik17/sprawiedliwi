@@ -25,17 +25,17 @@ Route::get('/', function() {
 
 // konkurs na statuetke
 Route::get('/konkurs', function() {
-    return view('konkurs');
+    return view('konkurs', ['html-title' => "Konkurs"]);
 })->name('konkurs');
 
 // o sprawiedliwych
 Route::get('/about-us', function() {
-    return view('about-us');
+    return view('about-us', ['html_title' => "O sprawiedliwych"]);
 })->name('about-us');
 
 // o projekcie
 Route::get('/about-project', function() {
-    return view('about-project');
+    return view('about-project', ['html_title' => "O projekcie"]);
 })->name('about-project');
 
 Route::get('/miejsca-pamieci', function() {
@@ -47,7 +47,8 @@ Route::get('/miejsca-pamieci', function() {
 Route::get('/publicystyka', function() {
     return view('post-category', [
         'category' => "Publicystyka",
-        'posts' => Post::orderBy('id', 'DESC')->get()
+        'posts' => Post::orderBy('id', 'DESC')->get(),
+        'html_title' => "Publicystyka"
     ]);
 })->name('publicystyka');
 
@@ -60,25 +61,26 @@ Route::get('/publicystyka/{category}', function($category) {
 
     return view('post-category', [
         'category' => $category,
-        'posts' => $categories->posts
+        'posts' => $categories->posts,
+        'html_title' => Str::title($category)
     ]);
 })->name('publicystyka.kategoria');
 
 Route::get('/patronaty', function() {
-    return view('patronaty');
+    return view('patronaty', ['html_title' => "Patronaty"]);
 })->name('patronaty');
 
 Route::get('/partnerzy', function() {
-    return view('partners');
+    return view('partners', ['html_title' => "Partnerzy"]);
 })->name('partners');
 
 Route::get('/kontakt', function() {
-    return view('contact');
+    return view('contact', ['html_title' => "Kontakt"]);
 })->name('contact');
 
 Route::get('/panel', function() {
     if(auth()->check()) {
-        return view('panel');
+        return view('panel', ['html_title' => "Panel Administratora"]);
     } else {
         return abort(404);
     }
