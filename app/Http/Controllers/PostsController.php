@@ -20,7 +20,13 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('create-post');
+        if(auth()->check()) {
+            return view('create-post');
+        }
+        else {
+            return abort(404);
+        }
+
     }
 
     /**
@@ -28,16 +34,20 @@ class PostsController extends Controller
      */
     public function store(Request $request, Post $post)
     {
-        $validated = $request->validate([
-            'title' => 'required|max:255',
-            'content' => 'required',
-            'category_id' => 'required'
-        ]);
+        if(auth()->check()) {
+            $validated = $request->validate([
+                'title' => 'required|max:255',
+                'content' => 'required',
+                'category_id' => 'required'
+            ]);
 
-        $post = Post::create($validated);
+            $post = Post::create($validated);
 
-        // return redirect()->route('post.show', ['post' => $post]);
-        return redirect()->route('panel');
+            // return redirect()->route('post.show', ['post' => $post]);
+            return redirect()->route('panel');
+        } else {
+            return abort(404);
+        }
     }
 
     /**
@@ -55,9 +65,13 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('edit-post', [
-            'post' => $post
-        ]);
+        if(auth()->check()) {
+            return view('edit-post', [
+                'post' => $post
+            ]);
+        } else {
+            return abort(404);
+        }
     }
 
     /**
@@ -65,10 +79,14 @@ class PostsController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $post->update($request->all());
+        if(auth()->check()) {
+            $post->update($request->all());
 
-        // return redirect()->route('post.show', ['post' => $post]);
-        return redirect('panel');
+            // return redirect()->route('post.show', ['post' => $post]);
+            return redirect('panel');
+        } else {
+            return abort(404);
+        }
     }
 
     /**
@@ -76,8 +94,12 @@ class PostsController extends Controller
      */
     public function destroy(Post $post)
     {
-        $post->delete();
+        if(auth()->check()) {
+            $post->delete();
 
-        return redirect('panel');
+            return redirect('panel');
+        } else {
+            return abort(404);
+        }
     }
 }
