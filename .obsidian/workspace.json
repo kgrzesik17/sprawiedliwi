@@ -11,14 +11,10 @@
             "id": "41ab1cccdf3bed10",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "New tab"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links"
             }
           },
           {
@@ -142,13 +136,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Pasted image 20250503192351.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of Pasted image 20250503192351"
             }
           }
         ]
@@ -168,17 +162,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "41ab1cccdf3bed10",
+  "active": "32f8b7a340cdf2d5",
   "lastOpenFiles": [
-    "Pasted image 20250503192353.png",
-    "Pasted image 20250503192351.png",
-    "Pasted image 20250503192329.png",
+    "rm-pictures/Pasted image 20250503192353.png",
+    "rm-pictures/Pasted image 20250503192351.png",
+    "rm-pictures/Pasted image 20250503192329.png",
+    "rm-pictures/Pasted image 20250503192326.png",
+    "rm-pictures/Pasted image 20250503192008.png",
+    "rm-pictures/Pasted image 20250503191748.png",
+    "rm-pictures/Pasted image 20250503191733.png",
+    "rm-pictures/Pasted image 20250503191718.png",
+    "rm-pictures/Pasted image 20250503191543.png",
+    "rm-pictures/Pasted image 20250503191517.png",
+    "rm-pictures",
+    "rm-picture",
     "Pasted image 20250503192326.png",
-    "Pasted image 20250503192008.png",
-    "Pasted image 20250503191748.png",
-    "Pasted image 20250503191733.png",
-    "Pasted image 20250503191718.png",
-    "Pasted image 20250503191543.png",
-    "Pasted image 20250503191517.png"
+    "README.md"
   ]
 }
