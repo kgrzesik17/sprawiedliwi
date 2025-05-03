@@ -35,7 +35,7 @@
             <input type="submit" class="button" value="Edytuj">
         </form>
 
-        <form action="{{ route('post.destroy', ['post' => $post]) }}" method="POST">
+        <form id="form-inline" action="{{ route('post.destroy', ['post' => $post]) }}" method="POST">
             @csrf
             @method('DELETE')
 
