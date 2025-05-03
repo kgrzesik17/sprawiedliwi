@@ -1,7 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>Rejestracja</h1>
+    <div id="edit-container">
+        <h2><a href="{{ route('panel') }}">←Powrót do panelu</a></h2>
+        <h1>Rejestracja</h1>
+    </div>
 
     <form action="{{ route('register') }}" method="POST">
         @csrf

@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="edit-container">
-        <h2><a href="{{ route('panel') }}">←Powrót</a></h2>
+        <h2><a href="{{ route('panel') }}">←Powrót do panelu</a></h2>
         <h1>Edycja postu</h1>
     </div>
 

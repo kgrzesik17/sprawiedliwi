@@ -47,7 +47,7 @@ Route::get('/miejsca-pamieci', function() {
 Route::get('/publicystyka', function() {
     return view('post-category', [
         'category' => "Publicystyka",
-        'posts' => Post::all()
+        'posts' => Post::orderBy('id', 'DESC')->get()
     ]);
 })->name('publicystyka');
 

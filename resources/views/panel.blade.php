@@ -18,7 +18,8 @@
             <a href="{{ route('post.create') }}"><button class="button">Dodaj post</button></a>
 
             <div class="admin-post">
-                @foreach(App\Models\Post::all() as $post)
+                {{-- @foreach(App\Models\Post::all() as $post) --}}
+                @foreach(App\Models\Post::orderBy('id', 'DESC')->get() as $post)
                 <div class="article">
                     <a href="{{ route('post.show', ['post' => $post]) }}"><h1>{{ $post->title }}</h1></a>
 

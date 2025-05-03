@@ -11,7 +11,7 @@ class Category extends Model
     }
 
     public function posts() {
-        return $this->hasMany('App\Models\Post');
+        return $this->hasMany('App\Models\Post')->orderBy('id', 'DESC');
     }
 
     public function getIdByName($name) {
