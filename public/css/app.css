@@ -339,11 +339,11 @@ nav a:hover {
     display: block;
 }
 
-.articles .article a {
+.articles a, #konkurs {
     color:#507ba8
 }
 
-.articles .article a:hover {
+.articles .article a:hover, #konkurs:hover {
     color:#314c68;
     text-decoration: underline;
 }
