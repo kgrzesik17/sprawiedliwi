@@ -5,13 +5,16 @@ Autor: Kacper Grzesik // kgrzesik17
 ## Implementacja i konfiguracja
 
 1. Zmień nazwę pliku .env.example na .env
-![[Pasted image 20250503191543.png]]
 
-2. Ustaw odpowiednie wartości dla połączenia z bazą danych
-![[Pasted image 20250503191748.png]]
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/Pasted%20image%2020250503191517.png?raw=true)
 
-3. **WAŻNE!** Po załadowaniu bazy danych, utwórz administratora, przechodząc na witrynę {domena}/register. **Uwaga!** Każdy utworzony użytkownik. Należy zrobić przed upublicznieniem strony, ponieważ dla pierwszej rejestracji nie jest sprawdzane czy dokonuje jej zalogowany administrator.
- ![[Pasted image 20250503192008.png]]
+3. Ustaw odpowiednie wartości dla połączenia z bazą danych
+
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/Pasted%20image%2020250503191718.png?raw=true)
+
+5. **WAŻNE!** Po załadowaniu bazy danych, utwórz administratora, przechodząc na witrynę {domena}/register. **Uwaga!** Każdy utworzony użytkownik. Należy zrobić przed upublicznieniem strony, ponieważ dla pierwszej rejestracji nie jest sprawdzane czy dokonuje jej zalogowany administrator.
+   
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/Pasted%20image%2020250503192008.png?raw=true)
 ## Funkcjonalność
 
 ### Modularny frontend - Blade
@@ -36,9 +39,12 @@ Dla administratorów dostępny jest panel, który znacznie ułatwia administracj
 ### Artykuły
 Zaimplementowano system artykułów (postów).
 
-- Sortowanie postów
-![[Pasted image 20250503192329.png]]
+- Sortowanie postów po kategorii.
+  System jest dynamiczny i automatycznie pobiera wszystkie dostępne kategorie z tabeli categories w bazie danych
+  
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/Pasted%20image%2020250503192326.png?raw=true)
 
 - Intuicyjny routing
-![[Pasted image 20250503192353.png]]
+  
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/Pasted%20image%2020250503192351.png?raw=true)
 
