@@ -421,3 +421,15 @@ select#category_id {
 #admin-form {
     display: inline;
 }
+
+#auth-button-container {
+    margin-top: 2rem;
+}
+
+.auth-form {
+    margin-top: 1rem;
+}
+
+#navbar-logout {
+    margin-left: 1rem;
+}

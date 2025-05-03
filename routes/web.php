@@ -5,6 +5,7 @@ use App\Models\Post;
 use App\Models\Category;
 
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\AuthController;
 
 // strona glowna
 Route::get('/', function() {
@@ -79,3 +80,11 @@ Route::get('/panel', function() {
 })->name('panel');
 
 Route::resource('/post', 'App\Http\Controllers\PostsController');
+
+// auth
+Route::get('/register',[AuthController::class, 'showRegister'])->name('show.register');
+Route::get('/login',[AuthController::class, 'showLogin'])->name('show.login');
+
+Route::post('/register',[AuthController::class, 'register'])->name('register');
+Route::post('/login',[AuthController::class, 'login'])->name('login');
+Route::post('/logout',[AuthController::class, 'logout'])->name('logout');
