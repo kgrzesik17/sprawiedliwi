@@ -20,20 +20,41 @@ Autor: Kacper Grzesik // kgrzesik17
 ### Modularny frontend - Blade
 Modularny frontend zaimplementowany w Blade pozwala na prostą modyfikację wyglądu strony.
 
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/blade1.png?raw=true)
+
+
 ### Strona główna
 Strona główna pokazuje w pierwszym kafelku najnowszy utworzony post.
+
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/index1.png?raw=true)
 
 ### Użytkownicy
 Zaimplementowano system użytkowników w celu autoryzacji administratora.
 
-- Normalni użytkownicy **nie** powinni posiadać konta.
+- Normalni użytkownicy **nie** powinni posiadać konta. Widok dla zwykłego użytkownika:
+  
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/1.png?raw=true)
+
 - Poufne dane są hashowane.
+  
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/2.png?raw=true)
+
 - Zalogowani użytkownicy (w tej implementacji - administratorzy) mają dostęp do Panelu Administratora
+  
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/3.png?raw=true)
+
 
 ### Panel administratora
 Dla administratorów dostępny jest panel, który znacznie ułatwia administrację artykułami oraz użytkownikami.
 
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/panel2.png?raw=true)
+
 - Tworzenie, edycja oraz usuwanie artykułów
+
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/panel2.png?raw=true)
+
+![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/panel3.png?raw=true)
+  
 - Tworzenie oraz usuwanie użytkowników (administratorów)
 
 ### Artykuły
