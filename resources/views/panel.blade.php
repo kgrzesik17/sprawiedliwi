@@ -3,31 +3,43 @@
 @section('content')
     <div class="panel">
         <h1>Panel administratora</h1>
+        <div>
+            <p>Jesteś zalogowany jako: <strong>{{ Auth::user()->name }}</strong></p>
+        </div>
 
-        <a href="{{ route('post.create') }}"><button class="button">Dodaj post</button></a>
+        <div class="panel-container">
+            <h2>Użytkownicy</h2>
 
-        <div class="admin-post">
-            @foreach(App\Models\Post::all() as $post)
-            <div class="article">
-                <a href="{{ route('post.show', ['post' => $post]) }}"><h1>{{ $post->title }}</h1></a>
+            <a href="{{ route('show.register') }}"><button class="button" type="submit">Dodaj administratora</button></a>
+        </div>
 
-                <img src="https://placehold.co/350x200" alt="article image">
+        <div class="panel-container">
+            <h2>Posty</h2>
+            <a href="{{ route('post.create') }}"><button class="button">Dodaj post</button></a>
 
-                <p>{{ Str::limit($post->content, 200) }}
-                    {{ strlen($post->content) > 200 ? "[...]" : '' }}
-                </p>
+            <div class="admin-post">
+                @foreach(App\Models\Post::all() as $post)
+                <div class="article">
+                    <a href="{{ route('post.show', ['post' => $post]) }}"><h1>{{ $post->title }}</h1></a>
 
-                <a href="{{ route('post.edit', ['post' => $post]) }}"><button id="edit-button" class="button">Edytuj</button></a>
+                    <img src="https://placehold.co/350x200" alt="article image">
 
-                <form id="admin-form" action="{{ route('post.destroy', ['post' => $post]) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
+                    <p>{{ Str::limit($post->content, 200) }}
+                        {{ strlen($post->content) > 200 ? "[...]" : '' }}
+                    </p>
 
-                    <button id="delete-button" class="button button-delete">Usuń</button>
-                </form>
+                    <a href="{{ route('post.edit', ['post' => $post]) }}"><button id="edit-button" class="button">Edytuj</button></a>
 
+                    <form id="admin-form" action="{{ route('post.destroy', ['post' => $post]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <button id="delete-button" class="button button-delete">Usuń</button>
+                    </form>
+
+                </div>
+            @endforeach
             </div>
-        @endforeach
         </div>
     </div>
 @endsection

@@ -433,3 +433,8 @@ select#category_id {
 #navbar-logout {
     margin-left: 1rem;
 }
+
+.panel-container {
+    border-top: 1px solid rgb(54, 54, 54);
+    margin-bottom: 1rem;
+}
