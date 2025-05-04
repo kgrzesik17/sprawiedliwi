@@ -40,10 +40,10 @@
                     @endif
 
                 @if(strlen($post->content) > 200)
-                    <p>{{ Str::limit($post->content, 200) }}[...]</p>
+                    <p>{{ strip_tags(Str::limit($post->content, 200)) }}[...]</p>
                     <a href="{{ route('post.show', ['post' => $post]) }}">Czytaj dalej...</a>
                 @else
-                    <p>{{ $post->content }}</p>
+                    <p>{{ strip_tags($post->content) }}</p>
                     <a href="{{ route('post.show', ['post' => $post]) }}">Czytaj artykuł...</a>
                 @endif
             </div>

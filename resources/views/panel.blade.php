@@ -45,7 +45,7 @@
                         @csrf
                         @method('DELETE')
 
-                        <button id="delete-button" class="button button-delete">Usuń</button>
+                        <button id="delete-button" class="button button-delete" onClick="return confirm('Na pewno chcesz usunąć post o ID: {{ $post->id }}?')">Usuń</button>
                     </form>
 
                 </div>

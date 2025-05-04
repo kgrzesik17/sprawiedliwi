@@ -384,6 +384,10 @@ nav a:hover {
     background-color: rgb(195, 18, 18);
 }
 
+#show-post-img {
+    margin-bottom: 1rem;
+}
+
 #edit-title {
     color: #1c5ca0;
     font-size: 25px;

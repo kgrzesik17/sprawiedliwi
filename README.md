@@ -61,7 +61,9 @@ Routing:
 
 ![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/panel3.png?raw=true)
   
-- Tworzenie oraz usuwanie użytkowników (administratorów)
+- Tworzenie użytkowników (administratorów). 
+
+- Dla większego bezpieczeństwa, usuwanie użytkowników odbywa się za pomocą bazy danych
 
 ### Artykuły
 Zaimplementowano system artykułów (postów).
