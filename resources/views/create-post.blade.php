@@ -3,10 +3,10 @@
 @section('content')
     <div id="edit-container">
         <h2><a href="{{ route('panel') }}">←Powrót do panelu</a></h2>
-        <h1>Edycja postu</h1>
+        <h1>Nowy post</h1>
     </div>
 
-    <form action="{{ route('post.store') }}" method="POST">
+    <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div>
@@ -23,6 +23,10 @@
 
         <div id="edit-content-container">
             <textarea name="content" id="edit-content" cols="60" rows="20" placeholder="Tutaj wpisz zawartość artykułu..."></textarea>
+        </div>
+
+        <div id="input-file-container">
+            <input type="file" name="input_file" id="input_file">
         </div>
 
         <div>

@@ -3,7 +3,7 @@
 @section('main')
     <div class="row-container">
         @if($post)
-        <div class="article" style="background-image: url('{{ asset('images/dummy-article.jpg') }}')">
+        <div class="article" style="background-image: url('{{ asset('images/' . $post->path) }}')">
             <a href="{{ route('post.show', ['post' => $post->id]) }}">
                 <div class="article-bar">
                     <p class="last-article-text">{{ $post->title }}</p>

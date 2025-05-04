@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('content');
             $table->integer('author_id')->nullable();
-            $table->integer('category_id')->nullable();
+            $table->integer('category_id');
+            $table->string('path')->nullable();
             $table->timestamps();
         });
     }

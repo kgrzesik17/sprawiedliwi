@@ -41,6 +41,14 @@ class PostsController extends Controller
                 'category_id' => 'required'
             ]);
 
+            if($file = $request->file('input_file')) {
+                $name = $file->getClientOriginalName();
+
+                $file->move('images', $name);
+
+                $validated['path'] = $name;
+            }
+
             $post = Post::create($validated);
 
             // return redirect()->route('post.show', ['post' => $post]);
@@ -80,6 +88,15 @@ class PostsController extends Controller
     public function update(Request $request, Post $post)
     {
         if(auth()->check()) {
+            if($file = $request->file('input_file')) {
+                $name = $file->getClientOriginalName();
+
+                $file->move('images', $name);
+
+                $post['path'] = $name;
+            }
+
+
             $post->update($request->all());
 
             // return redirect()->route('post.show', ['post' => $post]);

@@ -109,11 +109,13 @@ nav a:hover {
 .article, .statue {
     height: 400px;
     background-repeat: no-repeat;
+    margin-bottom: 4rem;
 }
 
 .article {
     width: 70%;
     margin-right: 62px;
+    background-position: center;
 }
 
 .article-bar {
@@ -441,4 +443,18 @@ select#category_id {
 
 #form-inline {
     display: inline;
+}
+
+#input-file-container {
+    margin-bottom: 2rem;
+}
+
+#edit-post-image {
+    max-height: 200px;
+    margin-bottom: 2rem;
+}
+
+#panel-post-img {
+    max-width: 350px;
+    max-height: 200px;
 }

@@ -33,7 +33,11 @@
             <div class="article">
                 <a href="{{ route('post.show', ['post' => $post]) }}"><h1>{{ $post->title }}</h1></a>
 
-                <img src="https://placehold.co/350x200" alt="article image">
+                @if(!is_null($post->path))
+                        <img id="panel-post-img" src="{{ asset('images/' . $post->path) }}" alt="image">
+                    @else
+                        <img id="panel-post-img" src="https://placehold.co/350x200" alt="article image">
+                    @endif
 
                 @if(strlen($post->content) > 200)
                     <p>{{ Str::limit($post->content, 200) }}[...]</p>

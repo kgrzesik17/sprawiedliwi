@@ -6,11 +6,11 @@
         <h1>Edycja postu</h1>
     </div>
 
-    <form action="{{ route('post.update', ['post' => $post]) }}" method="POST">
+    <form action="{{ route('post.update', ['post' => $post]) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div>
-            <input id="edit-title" type="text" value="{{ $post->title }}">
+            <input id="edit-title" name="title" type="text" value="{{ $post->title }}">
 
             <select name="category_id" id="category_id">
                 {{-- <option value="{{ $post->category->id }}">{{ $post->category->category_name }}</option> --}}
@@ -29,6 +29,14 @@
 
         <div id="edit-content-container">
             <textarea name="content" id="edit-content" cols="60" rows="20">{{ $post->content }}</textarea>
+        </div>
+
+        @if($post->path)
+            <img id="edit-post-image" src="{{ asset('images/' . $post->path) }}" alt="">
+        @endif
+
+        <div id="input-file-container">
+            <input type="file" name="input_file" id="input_file">
         </div>
 
         <div>
