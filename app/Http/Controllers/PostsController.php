@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+
 class PostsController extends Controller
 {
     /**
@@ -48,6 +50,8 @@ class PostsController extends Controller
 
                 $validated['path'] = $name;
             }
+
+            $validated['author_id'] = Auth::id();
 
             $post = Post::create($validated);
 

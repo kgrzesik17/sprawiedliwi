@@ -23,6 +23,12 @@
                 <div class="article">
                     <a href="{{ route('post.show', ['post' => $post]) }}"><h1>{{ $post->title }}</h1></a>
 
+                    @if($post->author)
+                        <p>Autor: {{ $post->author->name }}</p>
+                    @else
+                        <p>Autor: Anonymous</p>
+                    @endif
+
                     @if(!is_null($post->path))
                         <img id="panel-post-img" src="{{ asset('images/' . $post->path) }}" alt="image">
                     @else
