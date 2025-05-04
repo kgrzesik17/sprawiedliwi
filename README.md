@@ -15,6 +15,7 @@ Autor: Kacper Grzesik // kgrzesik17
 5. **WAŻNE!** Po załadowaniu bazy danych, utwórz administratora, przechodząc na witrynę {domena}/register. **Uwaga!** Każdy utworzony użytkownik. Należy zrobić przed upublicznieniem strony, ponieważ dla pierwszej rejestracji nie jest sprawdzane czy dokonuje jej zalogowany administrator.
    
 ![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/Pasted%20image%2020250503192008.png?raw=true)
+
 ## Funkcjonalność
 
 ### Modularny frontend - Blade
