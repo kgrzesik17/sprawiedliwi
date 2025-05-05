@@ -38,11 +38,11 @@
                     <form action="#" method="POST">
                         @csrf
                         <div>
-                            <input type="text">
+                            <input type="text" id="edit-title" placeholder="Szukaj">
                         </div>
 
                         <div>
-                            <button class="button" type="submit">Szukaj</button>
+                            <button class="button" type="submit">Szukaj...</button>
                         </div>
                     </form>
                 </div>

@@ -14,6 +14,33 @@
         </div>
 
         <div class="panel-container">
+            <h2>Kategorie</h2>
+
+            <div>
+                <form action="{{ route('category.store') }}" method="POST">
+                    @csrf
+                    @method('POST')
+
+                    <input type="text" name="category_name" id="edit-title">
+                    <input type="submit" value="Dodaj kategorię" class="button">
+                </form>
+            </div>
+
+            <ul>
+            @foreach (App\Models\Category::all() as $category)
+                <form action="{{ route('category.destroy', ['category' => $category]) }}", method="POST">
+                    @csrf
+                    @method('DELETE')
+
+                    <div id="panel-categories">
+                        <li><h3>{{ $category->category_name }}<input type="submit" class="button button-delete" name="category-delete" id="category-delete" value="Usuń" onClick="return confirm('Na pewno chcesz usunąć kategorię: {{ $category->category_name }}? Wszystkie posty o tej kategorii stracą ją.')"></h3> </li>
+                    </div>
+                </form>
+            @endforeach
+            </ul>
+        </div>
+
+        <div class="panel-container">
             <h2>Posty</h2>
             <a href="{{ route('post.create') }}"><button class="button">Dodaj post</button></a>
 

@@ -462,3 +462,7 @@ select#category_id {
     max-width: 350px;
     max-height: 200px;
 }
+
+#panel-categories input {
+    margin-left: 1rem;
+}

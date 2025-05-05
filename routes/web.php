@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
@@ -86,6 +88,22 @@ Route::get('/panel', function() {
     }
 
 })->name('panel');
+
+Route::delete('category/{category}', function (Category $category) {
+    $category->delete();
+
+    return redirect()->route('panel');
+})->name('category.destroy');
+
+Route::post('category', function (Request $request) {
+    $validated = $request->validate([
+        'category_name' => 'required|max:64'
+    ]);
+
+    Category::create($validated);
+
+    return redirect()->route('panel');
+})->name('category.store');
 
 Route::resource('/post', 'App\Http\Controllers\PostsController');
 
