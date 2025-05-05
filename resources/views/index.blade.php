@@ -3,7 +3,7 @@
 @section('main')
     <div class="row-container">
         @if($post)
-        <div class="article" style="background-image: url('{{ asset('images/' . $post->path) }}')">
+        <div class="article" style="background-image: url('{{ asset('images/' . $post->path) }}'); background-size: auto 600px;">
             <a href="{{ route('post.show', ['post' => $post->id]) }}">
                 <div class="article-bar">
                     <p class="last-article-text">{{ $post->title }}</p>
@@ -50,16 +50,16 @@
             </div>
 
             <div class="graveyard-col">
-                <p>
+                <p class="graveyard-text">
                     Historie Ukraińców ratujących Polaków, Rzez wołyńska czy tez uratowani Polacy na Wołyniu - to tematyka którą będziemy się tu niezależnie zajmować.
                 </p>
-                <p>
+                <p class="graveyard-text">
                     Tu będziemy zbierać informacje o eksterminacji polskiej ludności mieszkającej na kresach wschodnich przez ukraińskich nacjonalistów. Chcemy poznać ofiary, miejsca ich pochówku.
                 </p>
-                <p>
+                <p class="graveyard-text">
                     Nacjonaliści ukraińscy dokonali eksterminacji ludności polskiej zamieszkującej Kresy Wschodnie Rzeczypospolitej, które znalazły się pod okupacją sowiecką i niemiecką. Od pojedynczych napadów oraz rzezi na masową skalę. Zginęło tam, według różnych szacunków, ok. 100- 150 tys. osób. Trudno datować poszczególne masowe mogiły - nie mając dostępu do tych miejsc.
                 </p>
-                <p>
+                <p class="graveyard-text">
                     Opowiemy historie Ukraińców ratujących Polaków, pokażemy pomniki ludobójstwa OUN-UPA na podkarpaciu, przedstawimy zachowane relacje. Przedstawimy i opiszemy zbrodniarzy ukraińskich.
                 </p>
             </div>
@@ -67,7 +67,7 @@
     </div>
 
     <div class="row-container">
-        <div class="help" style="background-image: url('{{ asset('images/help.jpg') }}">
+        <div class="help" style="background-image: url('{{ asset('images/help.jpg') }}')">
             <div class="help-col">
                 <h1>Pomóż odnaleźć ludzi, którzy pomogli</h1>
             </div>

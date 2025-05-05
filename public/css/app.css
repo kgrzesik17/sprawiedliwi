@@ -191,6 +191,9 @@ nav a:hover {
     margin-bottom: 100px;
 }
 
+.graveyard-text {
+    margin-bottom: 2rem;
+}
 
 /* WORDS */
 .words {
@@ -322,9 +325,9 @@ nav a:hover {
 }
 
 /* ARTICLES */
-.articles .article {
+.article {
     width: 100%;
-    max-height: 200px;
+    height: auto;
 }
 
 .articles .article h1 {
@@ -465,4 +468,18 @@ select#category_id {
 
 #panel-categories input {
     margin-left: 1rem;
+}
+
+/* INDEX LITERATURA */
+#index-literatura {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.index-literatura-item {
+    width: 33%;
+    display: inline;
+    margin: auto;
 }

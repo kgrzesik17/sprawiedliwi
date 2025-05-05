@@ -40,7 +40,7 @@
         </div>
 
         <div>
-            <input type="submit" class="button" value="Edytuj">
+            <input type="submit" class="button" value="Zapisz">
         </form>
 
         <form id="form-inline" action="{{ route('post.destroy', ['post' => $post]) }}" method="POST">
