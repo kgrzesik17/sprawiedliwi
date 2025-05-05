@@ -20,6 +20,7 @@
 <body>
     @include('partials.top')
     @include('partials.navbar')
+    @include('partials.sm')
 
     <div class="main">
         <div class="post-view container">
