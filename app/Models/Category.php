@@ -18,6 +18,10 @@ class Category extends Model
     }
 
     public function getIdByName($name) {
+        if(!$this->first()) {
+            $this->create(['category_name' => 'literatura']);
+        }
+
         return $this->where('category_name', $name)->first()->id;
     }
 }
