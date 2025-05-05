@@ -68,6 +68,11 @@ Routing:
 ### Artykuły
 Zaimplementowano system artykułów (postów).
 
+- Artykuły mogą być pisane z użyciem znaczników HTML. W przypadku udostępnienia tej możliwości użytkownikom, należy zmodyfikować kod.
+
+  ![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/post1?raw=true)
+  ![](https://github.com/kgrzesik17/sprawiedliwi/blob/main/rm-pictures/post2?raw=true)
+
 - Sortowanie postów po kategorii.
   System jest dynamiczny i automatycznie pobiera wszystkie dostępne kategorie z tabeli categories w bazie danych
   
