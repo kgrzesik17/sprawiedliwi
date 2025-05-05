@@ -87,4 +87,32 @@
             <p>• Teza, jakoby stanem wojny można wytłumaczyć wszystkie okrucieństwa na ludności cywilnej – jest błędna. To było ludobójstwo i tak powinno być traktowane</p>
         </div>
     </div>
+
+    <div class="row-container">
+        <div id="index-literatura">
+            @foreach ($literatura as $post)
+                <div class="index-literatura-item">
+                    <a href="{{ route('post.show', ['post' => $post]) }}">
+                        @if(!is_null($post->path))
+                            <img id="panel-post-img" src="{{ asset('images/' . $post->path) }}" alt="image">
+                        @else
+                            <img id="panel-post-img" src="https://placehold.co/350x200" alt="article image">
+                        @endif
+
+                        <h2>{{ $post->title }}</h2>
+
+                        @if(strlen($post->content) > 200)
+                            <p>{{ strip_tags(Str::limit($post->content, 200)) }}[...]</p>
+                        @else
+                            <p>{{ strip_tags($post->content) }}</p>
+                        @endif
+                    </a>
+                </div>
+            @endforeach
+
+            <div>
+                <a href="{{ route('publicystyka.kategoria', ['category' => 'literatura']) }}"><button class="button">Zobacz więcej</button></a>
+            </div>
+        </div>
+    </div>
 @endsection

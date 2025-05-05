@@ -12,8 +12,14 @@ use App\Http\Controllers\AuthController;
 
 // strona glowna
 Route::get('/', function() {
+    $cat = new Category;
+    $literatura_id = $cat->getIdByName('literatura');
+
+    $literatura = Category::findOrFail($literatura_id);
+
     return view('index', [
-        'post' => Post::latest()->first()
+        'post' => Post::latest()->first(),
+        'literatura' => $literatura->posts->take(3)
     ]);
 
 })->name('index');

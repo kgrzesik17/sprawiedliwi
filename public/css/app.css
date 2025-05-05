@@ -473,6 +473,8 @@ select#category_id {
 /* INDEX LITERATURA */
 #index-literatura {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     text-align: center;
     margin-top: 2rem;
@@ -482,4 +484,12 @@ select#category_id {
     width: 33%;
     display: inline;
     margin: auto;
+    padding-bottom: 100px;
+    height: 400px;
 }
+
+.index-literatura-item a {
+    color: rgb(54, 54, 54);
+}
+
+/* FOOTER */
