@@ -51,7 +51,7 @@
 
             ClassicEditor
                 .create( document.querySelector( '#edit-content' ), {
-                    licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzgyODQ3OTksImp0aSI6ImViOTZiYWVjLWIxOTktNDBkYS04MTViLTQzZDg5MWFhMDlmMSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCJdLCJ2YyI6IjI4MTYxNDQ4In0.Ck1F9TKmRUSa4EcI0jDDO1PYS7pl9RX_FRGoE_tpD8G7epIuSO09_qD5KNGd30T3IayL0ng3W-JZgVuEcp73mw',
+                    licenseKey: '<ENTER YOUR LICENSE KEY>',
                     plugins: [ Essentials, Bold, Italic, Font, Paragraph, List, ListProperties ],
                     toolbar: [
                         'undo', 'redo', '|', 'bold', 'italic', '|',

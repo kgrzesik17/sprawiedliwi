@@ -109,10 +109,10 @@ nav a:hover {
 .article, .statue {
     background-repeat: no-repeat;
     margin-bottom: 1rem;
+    height: 400px;
 }
 
 .article {
-    height: 300px;
     width: 70%;
     margin-right: 1rem;
     background-position: center;
