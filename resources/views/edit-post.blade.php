@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+<script src="https://cdn.ckeditor.com/ckeditor5/45.0.0/ckeditor5.umd.js"></script>
+
 @section('content')
     <div id="edit-container">
         <h2><a href="{{ route('panel') }}">←Powrót</a></h2>
@@ -50,5 +52,31 @@
             <input type="submit" class="button button-delete" value="Usuń">
         </form>
         </div>
+
+        <script>
+            const {
+                ClassicEditor,
+                Essentials,
+                Bold,
+                Italic,
+                Font,
+                Paragraph,
+                List,
+                ListProperties
+            } = CKEDITOR;
+
+            ClassicEditor
+                .create( document.querySelector( '#edit-content' ), {
+                    licenseKey: '<ENTER YOUR LICENSE KEY>',
+                    plugins: [ Essentials, Bold, Italic, Font, Paragraph, List, ListProperties ],
+                    toolbar: [
+                        'undo', 'redo', '|', 'bold', 'italic', '|',
+                        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
+                        'bulletedList', 'numberedList'
+                    ]
+                } )
+                .then( /* ... */ )
+                .catch( /* ... */ );
+        </script>
 
 @endsection
