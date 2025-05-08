@@ -34,7 +34,9 @@ class AuthController extends Controller
 
             $user = User::create($validated);
 
-            Auth::login($user);
+            if (!auth()->check()){
+                Auth::login($user);
+            }
 
             return redirect()->route('index');
      }

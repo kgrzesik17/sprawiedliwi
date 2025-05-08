@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('main')
+    @if(!App\Models\User::first())
+        <h1>ZAREJESTRUJ PIERWSZEGO ADMINISTRATORA PRZED DEPLOYEM STRONY!!! <a href="{{ route('register') }}">Odnośnik do rejestracji</a></h1>
+    @endif
+
     <div class="row-container">
         @if($post)
         <div class="article" style="background-image: url('{{ asset('images/' . $post->path) }}'); background-size: auto 600px;">

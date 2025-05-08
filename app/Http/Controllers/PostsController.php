@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -52,6 +53,7 @@ class PostsController extends Controller
             }
 
             $validated['author_id'] = Auth::id();
+            $validated['slug'] = Str::slug($request['title']);
 
             $post = Post::create($validated);
 

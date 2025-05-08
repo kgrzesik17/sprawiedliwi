@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug');
             $table->text('content');
-            $table->integer('author_id')->nullable();
+            $table->integer('author_id');
             $table->integer('category_id');
             $table->string('path')->nullable();
             $table->timestamps();

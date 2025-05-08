@@ -1,10 +1,13 @@
 @extends('layouts.main')
 
+<script src="https://cdn.ckeditor.com/ckeditor5/45.0.0/ckeditor5.umd.js"></script>
+
 @section('content')
     <div id="edit-container">
         <h2><a href="{{ route('panel') }}">←Powrót do panelu</a></h2>
         <h1>Nowy post</h1>
     </div>
+
 
     <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -22,7 +25,7 @@
         </div>
 
         <div id="edit-content-container">
-            <textarea name="content" id="edit-content" cols="60" rows="20" placeholder="Tutaj wpisz zawartość artykułu..."></textarea>
+            <textarea name="content" id="edit-content" cols="60" rows="20"></textarea>
         </div>
 
         <div id="input-file-container">
@@ -33,5 +36,31 @@
             <input type="submit" class="button" value="Dodaj">
         </form>
         </div>
+
+        <script>
+            const {
+                ClassicEditor,
+                Essentials,
+                Bold,
+                Italic,
+                Font,
+                Paragraph,
+                List,
+                ListProperties
+            } = CKEDITOR;
+
+            ClassicEditor
+                .create( document.querySelector( '#edit-content' ), {
+                    licenseKey: 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NzgyODQ3OTksImp0aSI6ImViOTZiYWVjLWIxOTktNDBkYS04MTViLTQzZDg5MWFhMDlmMSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiXSwiZmVhdHVyZXMiOlsiRFJVUCJdLCJ2YyI6IjI4MTYxNDQ4In0.Ck1F9TKmRUSa4EcI0jDDO1PYS7pl9RX_FRGoE_tpD8G7epIuSO09_qD5KNGd30T3IayL0ng3W-JZgVuEcp73mw',
+                    plugins: [ Essentials, Bold, Italic, Font, Paragraph, List, ListProperties ],
+                    toolbar: [
+                        'undo', 'redo', '|', 'bold', 'italic', '|',
+                        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', '|',
+                        'bulletedList', 'numberedList'
+                    ]
+                } )
+                .then( /* ... */ )
+                .catch( /* ... */ );
+        </script>
 
 @endsection
