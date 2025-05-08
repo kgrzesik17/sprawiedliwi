@@ -9,20 +9,9 @@ use App\Models\User;
 
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
-// strona glowna
-Route::get('/', function() {
-    $cat = new Category;
-    $literatura_id = $cat->getIdByName('literatura');
-
-    $literatura = Category::findOrFail($literatura_id);
-
-    return view('index', [
-        'post' => Post::latest()->first(),
-        'literatura' => $literatura->posts->take(3)
-    ]);
-
-})->name('index');
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('index');
 
 // jeden artykul
 // Route::get('/post/{post}', function(Post $post) {
