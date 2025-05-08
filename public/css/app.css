@@ -107,12 +107,12 @@ nav a:hover {
 /* ARTICLE */
 
 .article, .statue {
-    height: 400px;
     background-repeat: no-repeat;
     margin-bottom: 1rem;
 }
 
 .article {
+    height: 300px;
     width: 70%;
     margin-right: 1rem;
     background-position: center;
@@ -136,6 +136,7 @@ nav a:hover {
 /* STATUE */
 
 .statue {
+    height: 400px;
     width: 40%;
     background-size: contain;
     margin-left: 62px;
@@ -327,7 +328,6 @@ nav a:hover {
 /* ARTICLES */
 .article {
     width: 100%;
-    height: auto;
 }
 
 .articles .article h1 {

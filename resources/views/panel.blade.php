@@ -47,7 +47,7 @@
             <div class="admin-post">
                 {{-- @foreach(App\Models\Post::all() as $post) --}}
                 @foreach(App\Models\Post::orderBy('id', 'DESC')->get() as $post)
-                <div class="article">
+                <div class="panel-article">
                     <a href="{{ route('post.show', ['post' => $post]) }}"><h1>{{ $post->title }}</h1></a>
 
                     @if($post->author)
