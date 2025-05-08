@@ -114,7 +114,7 @@ nav a:hover {
 
 .article {
     width: 70%;
-    margin-right: 62px;
+    margin-right: 1rem;
     background-position: center;
 }
 
@@ -136,7 +136,7 @@ nav a:hover {
 /* STATUE */
 
 .statue {
-    width: 30%;
+    width: 40%;
     background-size: contain;
     margin-left: 62px;
 }
@@ -564,3 +564,30 @@ select#category_id {
     transform: scale(1.2);
 }
 
+
+/* CKEDITOR */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media print {
+	body {
+		margin: 0 !important;
+	}
+}
+
+.main-container {
+	font-family: 'Lato';
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ck-content {
+	font-family: 'Lato';
+	line-height: 1.6;
+	word-break: break-word;
+}
+
+.editor-container_classic-editor .editor-container__editor {
+	min-width: 795px;
+	max-width: 795px;
+}

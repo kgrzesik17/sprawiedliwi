@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
 
-    protected $fillable = ['id', 'title', 'content', 'author_id', 'category_id', 'created_at', 'updated_at', 'path'];
+    protected $fillable = ['id', 'title', 'content', 'author_id', 'category_id', 'created_at', 'updated_at', 'path', 'slug'];
 
 
     public function category() {
