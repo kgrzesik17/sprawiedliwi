@@ -26,12 +26,12 @@ Route::get('/konkurs', function() {
 })->name('konkurs');
 
 // o sprawiedliwych
-Route::get('/about-us', function() {
+Route::get('/o-sprawiedliwych', function() {
     return view('about-us', ['html_title' => "O sprawiedliwych"]);
 })->name('about-us');
 
 // o projekcie
-Route::get('/about-project', function() {
+Route::get('/o-projekcie', function() {
     return view('about-project', ['html_title' => "O projekcie"]);
 })->name('about-project');
 
@@ -41,7 +41,7 @@ Route::get('/miejsca-pamieci', function() {
     ]);
 })->name('miejsca-pamieci');
 
-Route::get('/publicystyka', function() {
+Route::get('/category/publicystyka', function() {
     return view('post-category', [
         'category' => "Publicystyka",
         'posts' => Post::orderBy('id', 'DESC')->get(),
@@ -50,7 +50,7 @@ Route::get('/publicystyka', function() {
 })->name('publicystyka');
 
 
-Route::get('/publicystyka/{category}', function($category) {
+Route::get('/category/{category}', function($category) {
     $cat = new Category;
     $id = $cat->getIdByName($category);
 
@@ -63,7 +63,7 @@ Route::get('/publicystyka/{category}', function($category) {
     ]);
 })->name('publicystyka.kategoria');
 
-Route::get('/patronaty', function() {
+Route::get('/patronat-medialny', function() {
     return view('patronaty', ['html_title' => "Patronaty"]);
 })->name('patronaty');
 
