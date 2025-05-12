@@ -76,19 +76,15 @@ Route::get('/kontakt', function() {
 })->name('contact');
 
 Route::get('/panel', function() {
-    if(auth()->check()) {
-        return view('panel', ['html_title' => "Panel Administratora"]);
-    } else {
-        return abort(404);
-    }
+    return view('panel', ['html_title' => "Panel Administratora"]);
 
-})->name('panel');
+})->name('panel')->middleware('is_logged_in');
 
 Route::delete('category/{category}', function (Category $category) {
     $category->delete();
 
     return redirect()->route('panel');
-})->name('category.destroy');
+})->name('category.destroy')->middleware('is_logged_in');
 
 Route::post('category', function (Request $request) {
     $validated = $request->validate([
@@ -98,9 +94,9 @@ Route::post('category', function (Request $request) {
     Category::create($validated);
 
     return redirect()->route('panel');
-})->name('category.store');
+})->name('category.store')->middleware('is_logged_in');
 
-Route::resource('/post', 'App\Http\Controllers\PostsController');
+Route::resource('/post', 'App\Http\Controllers\PostsController')->middleware('is_logged_in');
 
 // auth
 Route::get('/register', [AuthController::class, 'showRegister'])->name('show.register');
