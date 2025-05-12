@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Http\Requests\PostRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -35,14 +36,10 @@ class PostsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, Post $post)
+    public function store(Post $post, PostRequest $request)
     {
         if(auth()->check()) {
-            $validated = $request->validate([
-                'title' => 'required|max:255',
-                'content' => 'required',
-                'category_id' => 'required'
-            ]);
+            $validated = $request->validated();
 
             if($file = $request->file('input_file')) {
                 $name = $file->getClientOriginalName();
