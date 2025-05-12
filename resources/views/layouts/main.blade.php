@@ -36,10 +36,9 @@
 
             <div class="post-right">
                 <div class="search">
-                    <form action="#" method="POST">
-                        @csrf
+                    <form action="{{ route('search') }}" method="GET">
                         <div>
-                            <input type="text" id="edit-title" placeholder="Szukaj">
+                            <input type="text" name="query" id="edit-title" placeholder="Szukaj">
                         </div>
 
                         <div>

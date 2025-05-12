@@ -96,6 +96,8 @@ Route::post('category', function (Request $request) {
     return redirect()->route('panel');
 })->name('category.store')->middleware('is_logged_in');
 
+Route::get('/search', 'App\Http\Controllers\SearchController@search')->name('search');
+
 Route::resource('/post', 'App\Http\Controllers\PostsController')->middleware('is_logged_in');
 
 // auth
