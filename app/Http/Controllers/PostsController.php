@@ -99,7 +99,6 @@ class PostsController extends Controller
                 $post['path'] = $name;
             }
 
-
             $post->update($request->all());
 
             // return redirect()->route('post.show', ['post' => $post]);
